@@ -7,7 +7,15 @@ using namespace std;
 #ifndef CUSTOM_MERGESORT_H
 #define CUSTOM_MERGESORT_H
 
-void mergeSort(vector<int>& ratings, int left, int right);
-void merge(vector<int>& ratings, int left, int mid, int right);
+struct movie_ratings {
+    int userid;
+    int movieid;
+    double rate;
+    int timestamp;
+};
+
+
+void mergeSort(vector<movie_ratings>& ratings, int left, int right);
+void merge(vector<movie_ratings>& ratings, int left, int mid, int right);
 
 #endif //CUSTOM_MERGESORT_H
