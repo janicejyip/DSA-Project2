@@ -47,7 +47,7 @@ void merge(vector<movie_ratings>& ratings, int left, int mid, int right) {
     while (i < n1 && j < n2) {
         //x is less than y than we place the x first
         //use rate from the struct because we want the actual numerical value
-        if (X[i].rate <= Y[j].rate) {
+        if (X[i].rate >= Y[j].rate) {
             ratings[k] = X[i];
             i++;
         }
